@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  TestWebApp:
+  test-web-app:
     build: ./TestWebApp
     ports:
      - "7000:7000"
