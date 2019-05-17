@@ -3,7 +3,7 @@ services:
   test-web-app:
     image: test-web-app
     build:
-     context:.
+     context: .
      dockerfile: TestWebApp/Dockerfile
     ports:
      - "7000:7000"
