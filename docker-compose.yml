@@ -1,11 +1,16 @@
 version: '3.1'
 services:
   test-web-app:
-    build: ./TestWebApp
+    image: test-web-app
+    build:
+     context:.
+     dockerfile: TestWebApp/Dockerfile
     ports:
      - "7000:7000"
   nginx:
     image: nginx:latest
+    dependx_on:
+      - test-web-app
     ports:
       - 80:80
     volumes:
