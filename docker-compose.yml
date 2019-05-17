@@ -9,7 +9,7 @@ services:
      - "7000:7000"
   nginx:
     image: nginx:latest
-    dependx_on:
+    depends_on:
       - test-web-app
     ports:
       - 80:80
